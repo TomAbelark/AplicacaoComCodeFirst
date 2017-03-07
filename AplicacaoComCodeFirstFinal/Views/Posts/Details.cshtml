@@ -1,0 +1,58 @@
+﻿@model AplicacaoComCodeFirstFinal.Models.Posts
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Posts</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Categorias.Categoria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Categorias.Categoria)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sTituloPost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sTituloPost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sResumoPost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sResumoPost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sConteudoPost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sConteudoPost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dDataPostagem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dDataPostagem)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.lPostId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

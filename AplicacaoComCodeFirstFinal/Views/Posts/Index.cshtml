@@ -1,0 +1,57 @@
+﻿@model IEnumerable<AplicacaoComCodeFirstFinal.Models.Posts>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Categorias.Categoria)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sTituloPost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sResumoPost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sConteudoPost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dDataPostagem)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Categorias.Categoria)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sTituloPost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sResumoPost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sConteudoPost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dDataPostagem)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.lPostId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.lPostId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.lPostId })
+        </td>
+    </tr>
+}
+
+</table>
